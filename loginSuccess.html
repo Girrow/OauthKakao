@@ -16,17 +16,19 @@
             let image_url=decodeURI(params.profile_image);
             document.getElementById("nickname").innerHTML=nickname;
             document.getElementById("profile_img").setAttribute('src',image_url);
+            if(Object.keys(params).length < 2){
+                document.getElementById("h1").innerHTML="KaKao Oauth Login Fail";
+            }
         }
     </script>
 </head>
 
 <body>
     <div style="text-align:center;">
-        <h1>KaKao Oauth Login Success</h1>
+        <h1 id="h1">KaKao Oauth Login Success</h1>
         <h2>NickName : <span id="nickname"></span></h2>
         <img id="profile_img" src="" alt="My Kakao Image">
     </div>
-    <h1>Kakao Oauth Login fail</h1>
 </body>
 
 </html>
