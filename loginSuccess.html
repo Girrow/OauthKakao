@@ -11,10 +11,13 @@
             return params;
         }
         window.onload = function() { 
+            
+            
+
+            let params=getUrlParams();
+
             let notDecode = params.profile_image;
             console.log("NotDec",notDecode);
-            
-            let params=getUrlParams();
             let nickname=decodeURI(params.nickname);
             let image_url=decodeURI(params.profile_image);
             document.getElementById("nickname").innerHTML=nickname;
