@@ -12,9 +12,9 @@
         }
         window.onload = function() { 
             let params=getUrlParams();
-            let nickname=params.nickname;
-            let image_url=params.profile_image;
-
+            let nickname=decodeURI(params.nickname);
+            let image_url=decodeURI(params.profile_image);
+            
             document.getElementById("nickname").innerHTML=nickname;
             document.getElementById("profile_img").setAttribute('src',image_url);
         }
